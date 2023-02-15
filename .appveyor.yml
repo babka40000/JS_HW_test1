@@ -1,6 +1,6 @@
 image: Ubuntu1804
 
-stack: node 18
+stack: node 12
 
 branches:
     only:
@@ -12,6 +12,9 @@ install:
     - npm install
     
 build: off
+
+build_script:
+  - npm run build
 
 test_script:
     - npm run lint && npm test
